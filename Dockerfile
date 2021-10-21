@@ -6,7 +6,6 @@ ADD . .
 RUN npm run build api
 
 FROM node:14-alpine
-FROM node:14-alpine as build
 WORKDIR /opt/app
 ADD package.json ./
 RUN npm install --only=prod
